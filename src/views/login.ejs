@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <div class="login">
-    <h1>pagina login</h1>
-    <% if (message.length>0){%>
-        <div class="alert alert-danger">
-            <%=message %>
-        </div>
-        <%}%>
-    <form action="/login" method="post">
-<div class="form-group">
-<label for="email">email</label>
-<input type="text" name="email" class="form-control">
-</div>
-<div class="form-group">
-    <label for="password">password</label>
-    <input type="password" name="password"class="form-control">
-</div>
-<input type="submit" class="btn-dark" >
-    </form>
-    <hr>
-    <div class="text-centar">
-        <p>Need an count? <a href="/signup">signup</a></p>
-        <p>or go <a href="/">Home</a></p>
+    <div class="box">
+
+        <form action="/login"  method="post">
+            <h2>Sign in </h2>
+            <div class="inputBox">
+                <input type="text" name="email" required>
+                <span>User name or Email</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required>
+                <span>Enter password</span>
+                <i></i>
+            </div>
+            <input type="submit" value="Login">
+            <div class="links">
+                <a href="/">Home </a>
+                <a href="/signup">SignUp</a>
+                
+            </div>
+            <div class="answer">
+                <% if (message.length>0){%>
+                    <div class="alert alert-danger">
+                        <%=message %>
+                    </div>
+                    <%}%>
+            </div>
+        </form>
     </div>
-</div>
 </body>
 </html>

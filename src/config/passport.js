@@ -56,7 +56,7 @@ function (req, email, password, done) {
     .exec() // Utiliza .exec() para manejar la consulta
     .then((user) => {
       if (!user) {
-        return done(null, false, req.flash('loginMessage', 'No User found'));
+        return done(null, false, req.flash('loginMessage', 'No User found  " TRY AGAIN "'));
       }
       if (!user.validPassword(password)) {
         return done(null, false, req.flash('loginMessage', 'Wrong password'));

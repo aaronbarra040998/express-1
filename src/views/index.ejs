@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <h1>Página Login</h1>
-    
-    <!-- Agregamos los botones -->
-    <a href="/login" class="btn btn-light"><span class="fa fa-user"></span>login local</a>
-    <a href="/signup" class="btn btn-light"><span class="fa fa-user"></span>sign local</a>
+    <div class="banner">
+        <div class="navbar">
+            <img src="/img/logo-devW.png" class="logo"  alt="logo" onclick="window.location.href = '/';">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Welcome Student</h1>
+            <P>Dear student, please select the option to enter.</P>
+        <div>            
+            <button type="button"onclick="window.location.href = '/login';"><span></span>LOGIN</button>
+            <button type="button" onclick="window.location.href = '/signup';"><span></span>SIGN UP</button>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
