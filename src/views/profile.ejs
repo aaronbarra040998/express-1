@@ -5,80 +5,396 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <%- include('partials/head') %>
+      <link rel="stylesheet" href="/css/profile.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   </head>
   <body>
-      <div class="container">
-        <header class="text-center">
-          <h1>Profile Page</h1>
-          <a href="/logout" class="btn btn-light btn-sm">
-            Logout
+
+    <header class="hero">
+      <div class="hero__wave"></div>
+  
+  
+      <div class="heroo">
+        <nav>
+            <img class="logo" src="/img/images/logo.png" alt="logo">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">features</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <img class="user-pic" src="/img/images/user.png" alt="profile" onclick="toggleMenu()">
+  
+          <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                  <div class="user-info">
+                      <img src="/img/menu/user.png" alt="">
+                      <h2><%= user.local.email %></h2>
+                  </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/img/images/profile.png" alt="imagen">
+                        <p>edit profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/img/images/setting.png" alt="imagen">
+                        <p>settings</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/img/images/help.png" alt="imagen">
+                        <p>help</p>
+                        <span>></span>
+                    </a>
+                    <a href="/logout" class="sub-menu-link">
+                        <img src="/img/images/logout.png" alt="imagen">
+                        <p>logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+  
+  
+    </div>
+      <section class="hero__main container">
+        <div class="slider">
+          <div class="list">
+              <div class="item">
+                  <img src="/img/images/1.png" alt="">
+              </div>
+              <div class="item">
+                  <img src="/img/images/2.png" alt="">
+              </div>
+              <div class="item">
+                  <img src="/img/images/3.png" alt="">
+              </div>
+              <div class="item">
+                  <img src="/img/images/4.png" alt="">
+              </div>
+              <div class="item">
+                  <img src="/img/images/5.png" alt="">
+              </div>
+          </div>
+          <div class="buttons">
+              <button id="prev"><</button>
+              <button id="next">></button>
+          </div>
+          <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+  
+  
+        <h1 class="hero__title">"Si se puede IMAGINAR, se puede PROGRAMAR"</h1>
+        <p class="hero__paragraph">La programación es una carrera altamente demandada que ofrece oportunidades laborales, salarios competitivos, flexibilidad, creatividad, aprendizaje continuo y un impacto positivo en el mundo, lo que la convierte en una opción atractiva para muchas personas.</p>
+          <a href="#" class="hero__cta">  
+            ENROLL
           </a>
-        </header>
-        <hr>
-        <div class="container">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
-                <p>
-                  <strong>id</strong> : <%= user._id %> <br>
-                  <strong>email</strong> : <%= user.local.email %> <br>
-                  <strong>password</strong> : <%= user.local.password %>
-                </p>
-                <a href="/logout" class="btn btn-light btn-sm">
-                  Logout
-                </a>
+      </section>
+  
+    
+    </header>
+  
+    <main class="main">
+      <section class="about container">
+  
+        <article class="about__item">
+          <figure class="about__picture">
+            <img src="/img/images/icon-any-file.svg" class="about__img">
+          </figure>
+  
+          <h3 class="about__title"> Access your files, anywhere</h3>
+  
+          <p class="about__paragraph"> The ability to use a smartphone, tablet, or computer to access your account means your 
+            files follow you everywhere.</p>
+        </article>
+  
+        <article class="about__item">
+          <figure class="about__picture">
+            <img src="/img/images/icon-security.svg" class="about__img">
+          </figure>
+  
+          <h3 class="about__title">  Security you can trust
+          </h3>
+  
+          <p class="about__paragraph"> 2-factor authentication and user-controlled encryption are just a couple of the security 
+            features we allow to help secure your files.
+          </p>
+        </article>
+  
+        
+  
+   
+        <article class="about__item">
+          <figure class="about__picture">
+            <img src="/img/images/icon-collaboration.svg" class="about__img">
+          </figure>
+  
+          <h3 class="about__title">Real-time collaboration</h3>
+  
+          <p class="about__paragraph">
+            Securely share files and folders with friends, family and colleagues for live collaboration. 
+            No email attachments required.</p>
+        </article>
+  
+        <article class="about__item">
+          <figure class="about__picture">
+            <img src="/img/images/icon-any-file.svg" class="about__img">
+          </figure>
+  
+          <h3 class="about__title">  Store any type of file</h3>
+  
+          <p class="about__paragraph">  Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+            file types to be securely stored and shared.</p>
+        </article>
+  
+      </section>
+  
+    </section>
+    <section class="card container">
+      <h1 class="join__title">  Get early access today
+      </h1>
+  <div class="gallery">
+    <article class="cardsito">
+      <figure>
+        <img
+          src="https://cdn.discordapp.com/attachments/759170694910705677/1153419886278754346/microsoft.png"
+          alt="Lavender Field"
+          alt="Winter Forest">
+        <figcaption>
+          <h3>.Net = 1500</h3>
+        </figcaption>
+      </figure>
+    </article>
+    <article class="cardsito">
+      <figure>
+        <img
+          src=" https://cdn.discordapp.com/attachments/759170694910705677/1153419886039670935/php.png">
+        <figcaption>
+          <h3>PHP = 800</h3>
+        </figcaption>
+      </figure>
+    </article>
+    <article class="cardsito">
+      <figure>
+        <img
+          src="https://cdn.discordapp.com/attachments/759170694910705677/1153419886530416670/java.png"
+          alt="Wooden Bridge">
+        <figcaption>
+          <h3>JAVA = 1200</h3>
+        </figcaption>
+      </figure>
+    </article>
+    <!-- Pictures from Unsplash -->
+  </div>
+    </section>
+
+      <section class="productive container">
+  
+        <figure class="productive__picture">
+          <img src="/img/images/illustration-stay-productive.png" class="productive__img">
+        </figure>
+  
+        <div class="productive__texts">
+  
+          <h3 class="productive__title"> Stay productive, wherever you are</h3>
+  
+          <p class="productive__paragraph"> Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+            storage needs.</p>
+  
+          <p class="productive__paragraph">Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+            attachments required.</p>
+  
+          <a href="#" class="productive__cta">  
+            See how Fylo works
+            <img src="/img/images/icon-arrow.svg" class="productive__arrow">
+          </a>
+  
+        </div>
+      </section>
+  
+      <section class="card container">
+        <h1 class="join__title">  Get early access today
+        </h1>
+        <div class="contenedor">
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+               <i class="fab fa-microsoft"></i>           
+                <h3>.NET</h3>
               </div>
             </div>
+            <div class="face face2">
+              <div class="content">
+                <p>.NET es un conjunto de tecnologías de desarrollo de software de Microsoft que se usa principalmente en aplicaciones empresariales y de escritorio, con un enfoque en la integración con Windows.</p>
+                <a href="https://dotnet.microsoft.com/en-us/" type="button">Read More</a>
+              </div>
+            </div>
+         </div>
+         
+         <div class="card">
+            <div class="face face1">
+              <div class="content">
+           <i class="fab fa-php"></i>               
+               <h3>PHP
+               </h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>PHP es un lenguaje de programación especializado en desarrollo web, permitiendo la creación de sitios y aplicaciones en línea con dinamismo. Su uso es extendido en la construcción de webs interactivas y sistemas web avanzados.</p>
+                <a href="https://www.php.net/" type="button">Read More</a>
+              </div>
+            </div>
+         </div>
+         
+         
+         <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <i class="fab fa-java"></i>
+                 <h3>JAVA</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p> Java es un lenguaje de programación versátil y seguro que se utiliza en una amplia variedad de aplicaciones, desde aplicaciones de escritorio hasta desarrollo web y móvil. Destaca por su portabilidad y orientación a objetos.</p>
+                <a href="https://www.java.com/es/" type="button">Read More</a>
+              </div>
+            </div>
+         </div>
+  
+       </div>
+  
+  
+      </section>
+  
+      <section class="join">
+        
+        <div class="join__container container">
+          <h3 class="join__title">  Enroll in your favorite course.
+          </h3>
+          <div class="container_box">
+  
+            <form action="/confirmacion" method="post" class="styled-form">
+                <div class="form-group row">
+                    <label for="curso" class="col-sm-3 col-form-label text-right">
+                        <h3>Curso:</h3>
+                    </label>
+                    <div class="com-box">
+                        <select class="form-options" id="curso" name="curso">
+                            <option value="Java">Java</option>
+                            <option value="PHP">PHP</option>
+                            <option value=".NET">.NET</option>
+                        </select>
+                    </div>
+                </div>
+  
+                <h2>Seleccione los módulos que el participante llevará:</h2>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="basico" name="modulos[]" value="Basico">
+                    <label class="form-check-label" for="basico">Básico</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="intermedio" name="modulos[]" value="Intermedio">
+                    <label class="form-check-label" for="intermedio">Intermedio</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="avanzado" name="modulos[]" value="Avanzado">
+                    <label class="form-check-label" for="avanzado">Avanzado</label>
+                </div>
+  
+                <h2>Seleccione el medio de pago:</h2>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="tarjeta" name="medioPago"
+                        value="Tarjeta de crédito">
+                    <label class="form-check-label" for="tarjeta">Tarjeta de crédito</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="efectivo" name="medioPago"
+                        value="Pago en efectivo">
+                    <label class="form-check-label" for="efectivo">Pago en efectivo</label>
+                </div>
+  
+                <button type="submit" class="join__input join__input--submit">Siguiente</button>
+                
+            </form>
+        </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="footer ">
+      <section class="footer__container container">
+        <img src="/img/images/logo.png" class="footer__logo">
+  
+        <div class="footer__items">
+          <p class="footer__contact footer__contact--first">
+            <img src="/img/images/icon-location.svg" class="footer__icon">
+            av.san isidro 3406, mirador. arequipa
+          </p>
+    
+    
+          <div class="footer__content">
+            
+            <p class="footer__contact footer__contact--second">
+              <img src="/img/images/icon-phone.svg" class="footer__icon">
+              +1-543-123-4567
+            </p>
+    
+            <div class="footer__location">
+              <p class="footer__contact">
+                <img src="/img/images/icon-email.svg" class="footer__icon">
+                aaron.apaza@tecsup.edu.pe
+              </p>
+            </div>
+    
+          </div>
+    
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">About Us</a>
+            <a href="#" class="footer__link">Jobs</a>
+            <a href="#" class="footer__link">Press</a>
+            <a href="#" class="footer__link">Blog</a>
+          </nav>
+    
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">Contact Us</a>
+            <a href="#" class="footer__link">Terms</a>
+            <a href="#" class="footer__link">Privacy</a>
+          </nav>
+    
+          <div class="footer__social">
+            <a href="#" class="footer__media"><img src="/img/images/fb.svg" class="footer__img"></a>
+            <a href="#" class="footer__media"><img src="/img/images/twitter.svg" class="footer__img"></a>
+            <a href="#" class="footer__media footer__media--last"><img src="/img/images/instagram.svg" class="footer__img"></a>
           </div>
         </div>
-        <section class="bg-light py-5 border-bottom" id="compra">
-          <div class="container mt-5">
-              <h1 class="text-center">Sistema de Matrículas</h1>
-              <form action="/confirmacion" method="post" class="styled-form">
-                  <div class="form-group row">
-                      <label for="curso" class="col-sm-3 col-form-label text-right">
-                          <h3>Curso:</h3>
-                      </label>
-                      <div class="col-sm-9">
-                          <select class="form-control" id="curso" name="curso">
-                              <option value="Java">Java</option>
-                              <option value="PHP">PHP</option>
-                              <option value=".NET">.NET</option>
-                          </select>
-                      </div>
-                  </div>
-
-                  <h2>Seleccione los módulos que el participante llevará:</h2>
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="basico" name="modulos[]" value="Basico">
-                      <label class="form-check-label" for="basico">Básico</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="intermedio" name="modulos[]" value="Intermedio">
-                      <label class="form-check-label" for="intermedio">Intermedio</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="avanzado" name="modulos[]" value="Avanzado">
-                      <label class="form-check-label" for="avanzado">Avanzado</label>
-                  </div>
-
-                  <h2>Seleccione el medio de pago:</h2>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="tarjeta" name="medioPago"
-                          value="Tarjeta de crédito">
-                      <label class="form-check-label" for="tarjeta">Tarjeta de crédito</label>
-                  </div>
-                  <div class="form-check">
-                      <input type="radio" class="form-check-input" id="efectivo" name="medioPago"
-                          value="Pago en efectivo">
-                      <label class="form-check-label" for="efectivo">Pago en efectivo</label>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
-              </form>
-          </div>
+        
       </section>
-      </div>
+  
+  
+    </footer>
+    /img/images/
+    <script src="scripts/profile-menu.js"></script>
+    <script src="scripts/slider-prins.js"></script>
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+
+
+
+
+
+
+
+
+
+
+
     </body>
   </html>
