@@ -33,12 +33,10 @@ db.once('open', () => {
   // Iniciar tu servidor Express aquí, si lo deseas
 });
 
-// Resto de tu código aquí...
-
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
-app.set('view engine','ejs');
+app.set('view engine','ejs');// Configuración de EJS como motor de plantillas
 //middleware
 app.use(morgan('dev'));
 app.use(cookieParser());

@@ -1,37 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <%- include('partials/head') %>
-</head>
-<body>
-    <div class="container">
-      <header class="text-center">
-        <h1>Profile Page</h1>
-        <a href="/logout" class="btn btn-light btn-sm">
-          Logout
-        </a>
-      </header>
-      <hr>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <%- include('partials/head') %>
+  </head>
+  <body>
       <div class="container">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
-              <p>
-                <strong>id</strong> : <%= user._id %> <br>
-                <strong>email</strong> : <%= user.local.email %> <br>
-                <strong>password</strong> : <%= user.local.password %>
-              </p>
-              <a href="/logout" class="btn btn-light btn-sm">
-                Logout
-              </a>
+        <header class="text-center">
+          <h1>Profile Page</h1>
+          <a href="/logout" class="btn btn-light btn-sm">
+            Logout
+          </a>
+        </header>
+        <hr>
+        <div class="container">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
+                <p>
+                  <strong>id</strong> : <%= user._id %> <br>
+                  <strong>email</strong> : <%= user.local.email %> <br>
+                  <strong>password</strong> : <%= user.local.password %>
+                </p>
+                <a href="/logout" class="btn btn-light btn-sm">
+                  Logout
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <section class="bg-light py-5 border-bottom" id="compra">
+          <div class="container mt-5">
+              <h1 class="text-center">Sistema de Matrículas</h1>
+              <form action="/confirmacion" method="post" class="styled-form">
+                  <div class="form-group row">
+                      <label for="curso" class="col-sm-3 col-form-label text-right">
+                          <h3>Curso:</h3>
+                      </label>
+                      <div class="col-sm-9">
+                          <select class="form-control" id="curso" name="curso">
+                              <option value="Java">Java</option>
+                              <option value="PHP">PHP</option>
+                              <option value=".NET">.NET</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <h2>Seleccione los módulos que el participante llevará:</h2>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="basico" name="modulos[]" value="Basico">
+                      <label class="form-check-label" for="basico">Básico</label>
+                  </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="intermedio" name="modulos[]" value="Intermedio">
+                      <label class="form-check-label" for="intermedio">Intermedio</label>
+                  </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="avanzado" name="modulos[]" value="Avanzado">
+                      <label class="form-check-label" for="avanzado">Avanzado</label>
+                  </div>
+
+                  <h2>Seleccione el medio de pago:</h2>
+                  <div class="form-check">
+                      <input type="radio" class="form-check-input" id="tarjeta" name="medioPago"
+                          value="Tarjeta de crédito">
+                      <label class="form-check-label" for="tarjeta">Tarjeta de crédito</label>
+                  </div>
+                  <div class="form-check">
+                      <input type="radio" class="form-check-input" id="efectivo" name="medioPago"
+                          value="Pago en efectivo">
+                      <label class="form-check-label" for="efectivo">Pago en efectivo</label>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
+              </form>
+          </div>
+      </section>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
