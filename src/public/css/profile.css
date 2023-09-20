@@ -336,9 +336,7 @@ nav ul li a {
     gap: 5em;
 }
 
-.about *{
-    /* outline: 1px solid #fff; */
-}
+
 .card h1{
     text-align: center;
 color: #fff;
@@ -440,11 +438,11 @@ padding-bottom: 4%;
     box-shadow:
         inset 0 0 60px whitesmoke,
         /* Sombra hacia el interior a la derecha con un radio de 80px y color azul */
-        inset 20px 0 80px rgb(38, 0, 255),
+        inset 20px 0 80px  rgb(0, 174, 255),
         /* Sombra hacia el interior a la izquierda con un radio de 80px y color amarillo */
         inset -20px 0 80px rgb(0, 174, 255),
         /* Sombra hacia el interior a la derecha con un radio de 300px y color azul */
-        inset 20px 0 300px rgb(38, 0, 255),
+        inset 20px 0 300px rgb(0, 174, 255),
         /* Sombra hacia el interior a la izquierda con un radio de 300px y color turquesa */
         inset -20px 0 300px rgb(98, 224, 217),
         /* Sombra hacia fuera con un radio de 50px y color blanco */
